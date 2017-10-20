@@ -54,3 +54,6 @@ ENV PATH $OSS_PATH:$PATH
 # Gradle opts
 ENV GRADLE_USER_HOME /cache
 ENV GRADLE_OPTS "-Dorg.gradle.jvmargs=-Xmx4096M"
+
+# Additional Path
+ENV PATH $ANDROID_HOME/build-tools/26.0.2:$PATH
