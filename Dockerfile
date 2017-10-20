@@ -61,3 +61,5 @@ ENV PATH $ANDROID_HOME/build-tools/26.0.2:$PATH
 # Ruby
 RUN sudo apt-get -y install ruby
 RUN sudo gem install ruby_apk
+RUN sudo gem install docopt
+RUN sudo gem install digest
