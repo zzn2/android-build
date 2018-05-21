@@ -65,4 +65,4 @@ RUN sudo gem install docopt
 RUN sudo gem install digest
 
 # KtLint
-RUN curl -sSLO https://github.com/shyiko/ktlint/releases/download/0.14.0/ktlint && chmod a+x ktlint && sudo mv ktlint /usr/local/bin/
+RUN curl -sSLO https://github.com/shyiko/ktlint/releases/download/0.23.1/ktlint && chmod a+x ktlint && sudo mv ktlint /usr/local/bin/
