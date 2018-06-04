@@ -62,7 +62,6 @@ ENV PATH $ANDROID_HOME/build-tools/26.0.2:$PATH
 RUN sudo apt-get -y install ruby
 RUN sudo gem install ruby_apk
 RUN sudo gem install docopt
-RUN sudo gem install digest
 
 # KtLint
 RUN curl -sSLO https://github.com/shyiko/ktlint/releases/download/0.23.1/ktlint && chmod a+x ktlint && sudo mv ktlint /usr/local/bin/
