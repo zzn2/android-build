@@ -25,9 +25,14 @@ RUN sudo apt-get -y install lib32stdc++6 lib32z1
 RUN curl -L https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip -o /tmp.zip
 RUN unzip /tmp.zip -d /opt/android && rm /tmp.zip
 
+ENV ANDROID_NDK_HOME /opt/android-ndk
+# Download Android ndk
+RUN curl -L https://dl.google.com/android/repository/android-ndk-r17b-linux-x86_64.zip -o /ndk-tmp.zip
+RUN unzip /ndk-tmp.zip -d ANDROID_NDK_HOME && rm /ndk-tmp.zip
+
 # Environment variables
 ENV ANDROID_HOME /opt/android
-ENV PATH $ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH
+ENV PATH $ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_NDK_HOME:$PATH
 
 # Update of Android SDK
 RUN echo y | sdkmanager "platforms;android-24"
