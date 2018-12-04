@@ -44,6 +44,7 @@ RUN echo y | sdkmanager "platforms;android-26"
 RUN echo y | sdkmanager "build-tools;26.0.0"
 RUN echo y | sdkmanager "build-tools;26.0.1"
 RUN echo y | sdkmanager "build-tools;26.0.2"
+RUN echo y | sdkmanager "build-tools;28.0.3"
 
 # Accept licenses
 RUN yes | sdkmanager --licenses
